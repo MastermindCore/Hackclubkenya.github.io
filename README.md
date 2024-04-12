@@ -104,7 +104,6 @@
 <body>
   <header>
     <h1>Welcome to Hack Club Kenya</h1>
-    ![download](https://github.com/Hackclubkenya/Hackclubkenya.github.io/assets/165708484/2840b361-b286-4307-b579-312f5ec2a264)
     <nav>
       <ul>
         <li><a href="#about">About Us</a></li>
