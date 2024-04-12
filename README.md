@@ -102,8 +102,7 @@
   </style>
 </head>
 <body>
-  <div style="text-align: center; background-color: black;">
-    <img src="download.png" alt="Description of your image" style="width: 20%; height: 20%; display: block; margin: 0 auto;">
+   <p><img src="download.png" style="width:170px;height:170px;margin-left:15px;float:right;">
 </div>
   <header>
     <h1>Welcome to Hack Club Kenya</h1>
