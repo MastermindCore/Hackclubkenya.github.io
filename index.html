@@ -6,6 +6,7 @@
   <title>Hack Club Kenya</title>
   <style>
     /* Reset default browser styles */
+    
     body, h1, h2, p, ul, li, a {
       margin: 0;
       padding: 0;
@@ -55,6 +56,15 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
+    section {
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    section:nth-child(even) {
+      background-color: #ffdddd;
+    }
+
     footer {
       background-color: #ff0000;
       color: black;
@@ -90,52 +100,54 @@
         padding: 10px;
       }
     }
-
     .slideshow {
-      position: relative;
-      max-width: 100%;
-      max-height: 300px; /* Set maximum height for the slideshow */
-      overflow: hidden;
-    }   
+    position: relative;
+    max-width: 100%;
+    max-height: 300px; /* Set maximum height for the slideshow */
+    overflow: hidden;
+}   
         
-    .slideshow img {
-      width: auto;
-      max-height: 100%; /* Ensure images fit within the slideshow height */
-      display: none;
-      margin: 0 auto; /* Center the images horizontally */
-    }
+        .slideshow img {
+            width: auto;
+            max-height: 100%; /* Ensure images fit within the slideshow height */
+            display: none;
+            margin: 0 auto; /* Center the images horizontally */
+        }
         
-    .slideshow img:first-child {
-      display: block;
-    }
+        .slideshow img:first-child {
+            display: block;
+        }
 
-    .slideshow-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(255, 255, 255, 0.5);
-      border: none;
-      color: black;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 18px;
-    }
+        .slideshow-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
 
-    .slideshow-btn-next {
-      right: 0;
-    }
+        .slideshow-btn-next {
+            right: 0;
+        }
 
-    .slideshow-btn-prev {
-      left: 0;
-    }
+        .slideshow-btn-prev {
+            left: 0;
+
   </style>
 </head>
 <body>
+ <div style="text-align: center;">
+    <img src="download.png" alt="Description of your image" style="max-width: 80%; max-height: 80%; display: block; margin: 0 auto;">
+  </div>
+
   <header>
     <h1>Welcome to Hack Club Kenya</h1>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#events">Events</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -145,46 +157,59 @@
     </nav>
   </header>
 
-  <div id="home" class="container">
-    <h2>Home</h2>
-    <div style="text-align: center;">
-      <img src="download.png" alt="Description of your image" style="max-width: 80%; max-height: 80%; display: block; margin: 0 auto;">
-    </div>
-  </div>
-
-  <div id="about" class="container">
+  <section id="about" class="container">
     <h2>About Us</h2>
     <p>Welcome to Hack Club Kenya! We are a community of high school students passionate about coding, technology, and innovation. Join us to learn, create, and collaborate on exciting projects.</p>
-  </div>
+  </section>
 
-  <div id="events" class="container">
+  <section id="events" class="container">
     <h2>Events</h2>
     <p>Stay tuned for our upcoming events! From workshops to hackathons, we have exciting opportunities for you to expand your skills and meet like-minded peers.</p>
-  </div>
+  </section>
 
-  <div id="projects" class="container">
+  <section id="projects" class="container">
     <h2>Projects</h2>
     <p>Check out some of the amazing projects created by our members. Get inspired, contribute, or start your own project with the support of our community.</p>
   
-    <div class="slideshow">
-      <img src="image1.jpg" alt="image1.jpg">
-      <img src="image2.jpg" alt="image2.jpg">
-      <img src="image3.jpg" alt="image3.jpg">
-      <button class="slideshow-btn slideshow-btn-prev" onclick="plusSlides(-1)">Previous</button>
-      <button class="slideshow-btn slideshow-btn-next" onclick="plusSlides(1)">Next</button>
+  <div class="slideshow">
+        <img src="image1.jpg" alt="image1.jpg">
+        <img src="image2.jpg" alt="image2.jpg">
+        <img src="image3.jpg" alt="image3.jpg">
+        <button class="slideshow-btn slideshow-btn-prev" onclick="plusSlides(-1)">Previous</button>
+        <button class="slideshow-btn slideshow-btn-next" onclick="plusSlides(1)">Next</button>
     </div>
-  </div>
+    </section>
 
-  <div id="signup" class="container">
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slideshow")[0].getElementsByTagName("img");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
+
+  <section id="signup" class="container">
     <h2>Sign Up</h2>
     <p>Click the button below to sign up:</p>
     <a href="https://forms.gle/RcvVYgyujoeqELv2A" class="btn">Sign Up Now</a>
-  </div>
+  </section>
 
-  <div id="contact" class="container">
+  <section id="contact" class="container">
     <h2>Contact Us</h2>
     <p>Have questions or want to get involved? Reach out to us via email at <a href="mailto:info@hackclubkenya.com">info@hackclubkenya.com</a> or follow us on social media.</p>
-  </div>
+  </section>
 
   <footer>
     <div class="container">
@@ -193,4 +218,3 @@
   </footer>
 </body>
 </html>
-
