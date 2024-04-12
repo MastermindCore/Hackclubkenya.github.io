@@ -108,9 +108,10 @@
 }   
         
         .slideshow img {
-            width: 100%;
-            height: auto;
+            width: auto;
+            max-height: 100%; /* Ensure images fit within the slideshow height */
             display: none;
+            margin: 0 auto; /* Center the images horizontally */
         }
         
         .slideshow img:first-child {
