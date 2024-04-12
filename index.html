@@ -22,6 +22,25 @@
             display: block;
         }
 
+        .slideshow-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .slideshow-btn-next {
+            right: 0;
+        }
+
+        .slideshow-btn-prev {
+            left: 0;
+
     body, h1, h2, p, ul, li, a {
       margin: 0;
       padding: 0;
@@ -148,13 +167,34 @@
   <section id="projects" class="container">
     <h2>Projects</h2>
     <p>Check out some of the amazing projects created by our members. Get inspired, contribute, or start your own project with the support of our community.</p>
-
-    <div class="slideshow">
+  </section>
+  <div class="slideshow">
         <img src="image1.jpg" alt="Image 1">
         <img src="image2.jpg" alt="Image 2">
         <img src="image3.jpg" alt="Image 3">
+        <button class="slideshow-btn slideshow-btn-prev" onclick="plusSlides(-1)">Previous</button>
+        <button class="slideshow-btn slideshow-btn-next" onclick="plusSlides(1)">Next</button>
     </div>
-  </section>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slideshow")[0].getElementsByTagName("img");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 
   <section id="signup" class="container">
     <h2>Sign Up</h2>
