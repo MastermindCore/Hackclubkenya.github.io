@@ -6,6 +6,22 @@
   <title>Hack Club Kenya</title>
   <style>
     /* Reset default browser styles */
+    .slideshow {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .slideshow img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        
+        .slideshow img:first-child {
+            display: block;
+        }
+
     body, h1, h2, p, ul, li, a {
       margin: 0;
       padding: 0;
@@ -132,6 +148,12 @@
   <section id="projects" class="container">
     <h2>Projects</h2>
     <p>Check out some of the amazing projects created by our members. Get inspired, contribute, or start your own project with the support of our community.</p>
+
+    <div class="slideshow">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
   </section>
 
   <section id="signup" class="container">
