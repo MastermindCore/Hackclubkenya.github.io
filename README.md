@@ -102,7 +102,7 @@
   </style>
 </head>
 <body>
-  <img src="download.png" alt="Description of your image" style="width: 100%; height: 20%;">
+  <img src="download.png" alt="Description of your image" style="width: 100%; height: 60%;">
   <header>
     <h1>Welcome to Hack Club Kenya</h1>
     <nav>
