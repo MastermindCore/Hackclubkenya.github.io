@@ -14,12 +14,12 @@
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      background-color: #f7f7f7;
-      color: #333;
+      background-color: #ffffff;
+      color: #333333;
     }
 
     header {
-      background-color: #333;
+      background-color: #ff0000;
       color: white;
       padding: 20px;
       text-align: center;
@@ -61,11 +61,11 @@
     }
 
     section:nth-child(even) {
-      background-color: #f9f9f9;
+      background-color: #ffdddd;
     }
 
     footer {
-      background-color: #333;
+      background-color: #ff0000;
       color: white;
       text-align: center;
       padding: 20px;
@@ -74,7 +74,7 @@
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #333;
+      background-color: #ff0000;
       color: white;
       text-decoration: none;
       border-radius: 5px;
@@ -82,7 +82,7 @@
     }
 
     .btn:hover {
-      background-color: #555;
+      background-color: #cc0000;
     }
 
     @media(max-width: 600px) {
@@ -148,4 +148,3 @@
   </footer>
 </body>
 </html>
-
