@@ -102,9 +102,9 @@
   </style>
 </head>
 <body>
-  <div style="text-align: center; background-color: black;">
+  <div style="text-align: center;">
     <img src="download.png" alt="Description of your image" style="max-width: 80%; max-height: 80%; display: block; margin: 0 auto;">
-</div>
+  </div>
 
   <header>
     <h1>Welcome to Hack Club Kenya</h1>
