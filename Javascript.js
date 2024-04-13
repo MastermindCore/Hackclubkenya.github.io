@@ -1,33 +1,10 @@
-// Smooth scrolling
-const links = document.querySelectorAll('nav a');
+document.addEventListener("DOMContentLoaded", function() {
+  const intro = document.getElementById("intro");
 
-links.forEach(link => {
-  link.addEventListener('click', smoothScroll);
+  // Hide intro after 5 seconds
+  setTimeout(function() {
+    intro.classList.add("hidden");
+    document.body.style.overflow = "auto"; // Restore scrolling
+  }, 5000); // Change 5000 to the desired duration in milliseconds
 });
 
-function smoothScroll(e) {
-  e.preventDefault();
-
-  const targetId = this.getAttribute('href');
-  const targetPosition = document.querySelector(targetId).offsetTop;
-  const startPosition = window.pageYOffset;
-  const distance = targetPosition - startPosition;
-  const duration = 1000; // in milliseconds
-  let start = null;
-
-  function step(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-    if (progress < duration) window.requestAnimationFrame(step);
-  }
-
-  window.requestAnimationFrame(step);
-}
-
-function easeInOutCubic(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return c / 2 * t * t * t + b;
-  t -= 2;
-  return c / 2 * (t * t * t + 2) + b;
-}
